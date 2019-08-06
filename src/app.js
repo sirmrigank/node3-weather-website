@@ -1,3 +1,5 @@
+console.log('hello')
+
 const express = require("express");
 const path = require("path");
 const geocode = require("./utils/geocode");
@@ -100,8 +102,9 @@ app.get("*", (req, res) => {
 
 // app.get("/about", (req,res) => {
 //    res.send("<h1>Hello this is about page</h1>")
-// })
+// })`
 
 app.listen(3000, () => {
   console.log("Server is running 3000 port");
 });
+`
