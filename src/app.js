@@ -1,5 +1,3 @@
-console.log('hello')
-
 const express = require("express");
 const path = require("path");
 const geocode = require("./utils/geocode");
@@ -7,6 +5,9 @@ const forecast = require("./utils/forecast");
 const hbs = require("hbs");
 
 const app = express();
+const port=process.env.PORT || 3000
+
+
 
 const staticFilePath = path.join(__dirname, "../public");
 const viewPath = path.join(__dirname, "../template/views");
@@ -102,9 +103,8 @@ app.get("*", (req, res) => {
 
 // app.get("/about", (req,res) => {
 //    res.send("<h1>Hello this is about page</h1>")
-// })`
+// })
 
-app.listen(3000, () => {
-  console.log("Server is running 3000 port");
+app.listen(port, () => {
+  console.log("Server is running  port" + port);
 });
-`
